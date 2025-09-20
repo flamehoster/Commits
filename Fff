@@ -1,0 +1,20 @@
+# Инициализация репозитория (если еще не создан)
+git init
+
+# Добавление удаленного репозитория
+git remote add origin https://github.com/flamehoster/repository.git
+
+# Создание 10 коммитов
+for i in {1..10}; do
+    # Создаем или изменяем файл
+    echo "Commit $i - $(date)" >> commits.txt
+    
+    # Добавляем изменения
+    git add commits.txt
+    
+    # Создаем коммит
+    git commit -m "Commit number $i"
+done
+
+# Отправляем коммиты на GitHub
+git push -u origin main
