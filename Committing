@@ -1,0 +1,13 @@
+git init
+
+git remote add origin https://github.com/username/repository.git
+
+for i in {1..10}; do
+    echo "Commit $i - $(date)" >> commits.txt
+    
+    git add commits.txt
+    
+    git commit -m "Commit number $i"
+done
+
+git push -u origin main
